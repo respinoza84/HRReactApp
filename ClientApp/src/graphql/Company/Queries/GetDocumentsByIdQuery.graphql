@@ -1,0 +1,29 @@
+query GetDocumentsById(
+  $companyId: Int!
+  $skip: Int!
+  $take: Int!
+  $order: [DocumentSortInput!]
+  ){
+  documentsById(
+    companyId: $companyId
+    skip: $skip
+    take: $take
+    order: $order
+    ){
+    items{
+      id
+      fileName
+      fileType
+      fileSize
+      modifiedDate
+      modifiedBy
+      companyId
+      blobPath
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }    
+  }
+}

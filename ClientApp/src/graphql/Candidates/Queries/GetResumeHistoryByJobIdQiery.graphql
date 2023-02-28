@@ -1,0 +1,28 @@
+
+query GetResumeHistoryByJobIdAsync(  
+  $jobId: Int!
+  $skip: Int!
+  $take: Int!
+  $order: [ResumeHistorySortInput!]){
+  resumeHistoryByJobId(
+    jobId: $jobId
+    skip: $skip
+    take: $take
+    order: $order
+  ){
+    items{
+      jobId
+      jobTittle
+      jobDescription
+      companyName
+      startDate
+      endDate
+      salaryRate
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

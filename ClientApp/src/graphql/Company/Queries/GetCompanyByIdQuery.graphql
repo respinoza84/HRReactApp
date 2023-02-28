@@ -1,0 +1,38 @@
+query GetCompanyById($companyId: Int!, $userId: Int!) {
+  companyById(companyId: $companyId, userId: $userId) {
+      companyName
+      companyType
+      companyVertical
+      companyOwner
+      internalReference
+      parentCompany
+      companyRank
+      companySource
+      department
+      territory
+      backgroundInformation      
+      primaryContactInfo{
+        id
+        addressLine1
+        addressLine2
+        country
+        city
+        website
+        department
+        email
+        isPrimaryConctact
+        phone
+        state
+        zipCode
+        contactName
+        primaryPhone
+      }
+      percentComplete
+      applicantStageSummary
+      preScreenStageSummary
+      offerStageSummary
+      workingStageSummary
+      resumenSentStageSummary
+      companyImageUrl
+  }
+}

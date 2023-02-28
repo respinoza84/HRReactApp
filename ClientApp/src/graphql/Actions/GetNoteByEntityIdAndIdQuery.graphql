@@ -1,0 +1,16 @@
+query GetNoteByEntityIdAndId(
+  $entityId: Int!
+  $noteId: Int!
+  ){
+  noteByEntityIdAndId(
+    entityId: $entityId
+    noteId: $noteId
+    ){
+      id
+      text
+      createdBy
+      modifiedBy
+      modifiedDate
+      createdDate    
+  }
+}

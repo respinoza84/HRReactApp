@@ -1,0 +1,30 @@
+query GetDocuments(
+  $entityId: Int!
+  $entityName: String!
+  $skip: Int!
+  $take: Int!
+  $order: [DocumentSortInput!]
+) {
+  documents(
+    entityId: $entityId
+    entityName: $entityName
+    skip: $skip
+    take: $take
+    order: $order
+  ) {
+    items {
+      id
+      fileName
+      fileType
+      fileSize
+      modifiedDate
+      modifiedBy
+      blobPath
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

@@ -1,0 +1,17 @@
+query GetCompanyActivities(
+  $companyId: Int!
+  $skip: Int!
+  $take: Int!
+  $order: [ActivitySortInput!]) {
+  companyActivities(
+    companyId: $companyId
+    skip: $skip
+    take: $take
+    order: $order) {
+      items{
+        action
+        createdDate
+        createdBy      
+      }
+  }
+}

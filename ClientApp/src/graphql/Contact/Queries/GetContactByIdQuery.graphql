@@ -1,0 +1,28 @@
+query GetContactById(
+  $companyId: Int!
+  $contactId: Int!
+) {
+  contactById(
+    companyId: $companyId
+    contactId: $contactId
+  ) {
+    id
+    contactName
+    email
+    phone
+    city
+    state
+    country
+    zipCode
+    isPrimaryConctact
+    department
+    addressLine1
+    addressLine2
+    companyId
+    website
+    primaryPhone
+    modifiedBy
+    createdBy
+    createdDate
+  }
+}

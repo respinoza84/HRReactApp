@@ -1,0 +1,38 @@
+query GetCandidateByUserId($userId: Int!) {
+  candidateByUserId(userId: $userId) {
+      id
+      code
+      firstName
+      lastName
+      prefferedName
+      owner
+      source
+      status
+      email
+      homePhone
+      cellPhone
+      workPhone
+      linkedIn
+      indeed
+      facebook
+      twitter
+      jobTitle
+      noticePeriod
+      summary
+      otherEmail
+      workType
+      marketing
+      dateLastContacted
+      dateResumeSent
+      territory
+      createdDate
+      modifiedDate
+      byEmail
+      byPhone
+      byText
+      displayAs
+      department
+      userId
+      percentComplete
+  }
+}

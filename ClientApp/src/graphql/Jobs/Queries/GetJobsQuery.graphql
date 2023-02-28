@@ -1,0 +1,51 @@
+
+query GetJobs(  
+  $filter: JobFilterInput!
+  $skip: Int!
+  $take: Int!
+  $order: [JobSortInput!]){
+  jobs(
+    filter: $filter
+    skip: $skip
+    take: $take
+    order: $order
+  ){
+    items{
+      id
+      city
+      state
+      zipCode
+      territory
+      numOfPositions
+      contactName
+      createdDate
+      modifiedDate
+      companyId
+      companyName
+      statusId
+      status
+      jobName
+      jobType
+      jobType
+      jobSource
+      jobDescription
+      jobOwnerShip   
+      totalDocuments    
+      candidates
+      career
+      contactId
+      payRange
+      jobVertical
+      salaryFrom
+      salaryTo
+      jobOwnerShipEmail
+      stage
+      internalReference
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

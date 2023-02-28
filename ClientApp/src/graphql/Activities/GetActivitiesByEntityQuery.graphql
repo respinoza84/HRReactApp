@@ -1,0 +1,24 @@
+query GetActivitiesByEntity(
+  $entityId: Int!
+  $entityName: String!
+  ){
+  activitiesByEntity(
+    entityId: $entityId
+    entityName: $entityName
+    ){
+    items{
+      id
+      entityId
+      action
+      createdBy
+      modifiedBy
+      modifiedDate
+      createdDate
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }    
+  }
+}

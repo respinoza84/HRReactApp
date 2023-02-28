@@ -1,0 +1,29 @@
+
+query GetApplicantsByJobIdAsync(  
+  $jobId: Int!
+  $skip: Int!
+  $take: Int!
+  $order: [ApplicantSortInput!]){
+  applicantsByJobId(
+    jobId: $jobId
+    skip: $skip
+    take: $take
+    order: $order
+  ){
+    items{
+      candidateId
+      applicantName
+      source
+      applicationDate
+      lastActivity
+      startDate
+      endDate
+      modifiedDate
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

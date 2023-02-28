@@ -1,0 +1,16 @@
+query GetCompanyHistory($companyId: Int!) {
+  companyHistory(companyId: $companyId) {
+    jobs{
+      id
+      clientJobCode
+      city
+      state
+      statusId
+    }
+    contacts{
+      name
+      email
+      phone
+    }
+  }
+}

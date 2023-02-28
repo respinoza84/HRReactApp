@@ -1,0 +1,50 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Start",
+      "type": "shell",
+      "command": "npm start",
+      "problemMatcher": ["$eslint-compact"]
+    },
+    {
+      "label": "ES Lint",
+      "type": "shell",
+      "command": "npm run eslint",
+      "problemMatcher": ["$eslint-compact"]
+    },
+    {
+      "label": "Test",
+      "type": "shell",
+      "command": "npm test",
+      "windows": {
+        "options": {
+          "shell": {
+            "executable": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+          }
+        }
+      },
+      "problemMatcher": ["$eslint-compact"]
+    },
+    {
+      "label": "NPM Install",
+      "type": "shell",
+      "command": "npm i",
+      "problemMatcher": []
+    },
+    {
+      "label": "NPM Install from Lock File",
+      "type": "shell",
+      "command": "npm i --from-lockfile",
+      "problemMatcher": []
+    },
+    {
+      "label": "Library Build",
+      "type": "shell",
+      "command": "npm run build:lib",
+      "problemMatcher": []
+    }
+  ]
+}

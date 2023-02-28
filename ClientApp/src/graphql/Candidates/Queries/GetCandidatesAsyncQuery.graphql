@@ -1,0 +1,56 @@
+
+query GetCandidatesAsync(  
+  $filter: CandidateFilterInput!
+  $skip: Int!
+  $take: Int!
+  $order: [CandidateSortInput!]){
+  candidates(
+    filter: $filter
+    skip: $skip
+    take: $take
+    order: $order
+  ){
+    items{
+      id
+      code
+      firstName
+      lastName
+      prefferedName
+      owner
+      source
+      status
+      email
+      homePhone
+      cellPhone
+      workPhone
+      linkedIn
+      indeed
+      facebook
+      twitter
+      jobTitle
+      currentEmployer
+      noticePeriod
+      summary
+      otherEmail
+      workType
+      timeZone
+      marketing
+      dateLastContacted
+      dateResumeSent
+      territory
+      createdDate
+      modifiedDate
+      byEmail
+      byPhone
+      byText
+      displayAs
+      department     
+      lastActivity 
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

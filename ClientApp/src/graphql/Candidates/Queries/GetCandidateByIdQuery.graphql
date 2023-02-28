@@ -1,0 +1,47 @@
+query GetCandidateById($candidateId: Int!) {
+  candidateById(candidateId: $candidateId) {
+    id
+    code
+    createdDate
+    email
+    firstName
+    lastName
+    indeed
+    linkedIn
+    facebook
+    twitter
+    modifiedDate
+    noticePeriod
+    owner
+    source
+    status
+    summary
+    department
+    byEmail
+    byPhone
+    byText
+    cellPhone
+    dateLastContacted
+    dateResumeSent
+    displayAs
+    homePhone
+    isDeleted
+    jobTitle
+    currentEmployer
+    marketing
+    otherEmail
+    prefferedName
+    privateRecord
+    rigthToRepresent
+    territory
+    workPhone
+    workType
+    userId
+    lookingJob
+    rate
+    rateMount
+    timeZone
+    userImageUrl
+    jobName
+  }
+}

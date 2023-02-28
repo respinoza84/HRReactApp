@@ -1,0 +1,17 @@
+query GetActivityByEntityIdAndId(
+  $entityId: Int!
+  $activityId: Int!
+  ){
+  activityByEntityIdAndId(
+    entityId: $entityId
+    activityId: $activityId
+    ){
+      id
+      entityId
+      action
+      createdBy
+      modifiedBy
+      modifiedDate
+      createdDate    
+  }
+}

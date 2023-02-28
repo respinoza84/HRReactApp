@@ -1,0 +1,6 @@
+query GetHiringManagersByCompanyById($companyId: Int!) {
+  hiringManagersByCompanyById(companyId: $companyId) {
+    id
+    hiringManagerName
+  }
+}

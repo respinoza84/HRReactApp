@@ -1,0 +1,44 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.tittle {
+  /* Layout Properties */
+  top: 351px;
+  left: 292px;
+  width: 1556px;
+  height: 32px;
+
+  /* UI Properties */
+  font: var(--unnamed-font-style-normal) normal medium 24px/26px var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-4d4d4d);
+  text-align: left;
+  font: normal normal medium 24px/26px Roboto;
+  letter-spacing: 0px;
+  color: #4D4D4D;
+  opacity: 1;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,19 @@
+query GetContactInfoById($candidateId: Int!) {
+  contactInfoById(candidateId: $candidateId) {
+      candidateId
+      addressLine1
+      addressLine2
+      city
+      state
+      zipCode
+      country
+      homePhone
+      cellPhone
+      workPhone
+      email
+      indeed
+      linkedIn   
+      facebook
+      twitter
+  }
+}

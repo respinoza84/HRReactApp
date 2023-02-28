@@ -1,0 +1,50 @@
+img {
+  border-radius: 50%;
+}
+.avatar {
+  position: relative;
+
+  padding: 180px 200px 28px 24px;
+}
+.content {
+  padding-left: 250px;
+}
+.rightContent {
+  padding: 160px 0 50px 0;
+  min-width: 460px;
+  text-align: right;
+}
+.quote {
+  padding: 30px 0 0 0;
+}
+.applicantName {
+  min-width: 300px;
+}
+.applicantStatus {
+  margin: auto;
+  padding: 10px;
+}
+.progress {
+  width: 150px;
+  font-size: 45px;
+  margin: auto;
+}
+.completeProfile {
+  width: 500px;
+  font-size: 25px;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+.completeProfile1 {
+  width: 500px;
+  font-size: 18px;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+.companySumary {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}

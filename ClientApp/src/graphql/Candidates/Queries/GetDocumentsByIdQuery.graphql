@@ -1,0 +1,28 @@
+query GetDocumentsById(
+  $candidateId: Int!
+  $skip: Int!
+  $take: Int!
+  $order: [DocumentSortInput!]
+  ){
+  documentsById(
+    candidateId: $candidateId
+    skip: $skip
+    take: $take
+    order: $order
+    ){
+    items{
+      id
+      fileName
+      fileType
+      fileSize
+      modifiedDate
+      modifiedBy
+    companyId
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }    
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "extends": ["react-app", "plugin:prettier/recommended"],
+  "rules": {
+    // ERROR
+    "no-var": "error",
+    "space-unary-ops": "error",
+    "no-param-reassign": "error",
+    "import/no-anonymous-default-export": "error",
+    "import/no-mutable-exports": "error",
+    "import/no-useless-path-segments": "error",
+    "prefer-const": "error",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    // WARN
+    "import/newline-after-import": "warn",
+    "no-alert": "warn",
+    "no-debugger": "warn",
+    "no-console": [
+      "warn",
+      { "allow": ["info", "warn", "error", "exception", "table"] }
+    ]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"]
+}

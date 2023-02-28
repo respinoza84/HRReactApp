@@ -1,0 +1,25 @@
+query GetNotesById(
+  $companyId: Int!
+  $entityName: String!
+  ){
+    notesById(
+      companyId: $companyId
+  
+      entityName: $entityName
+      ){
+        items{
+          id
+          text
+          createdBy
+          modifiedBy
+          modifiedDate
+          createdDate
+          entityId
+        }
+        totalCount
+        pageInfo {
+            hasNextPage
+            hasPreviousPage
+        }
+    }
+}

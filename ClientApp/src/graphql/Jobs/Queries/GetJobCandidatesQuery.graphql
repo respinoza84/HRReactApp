@@ -1,0 +1,34 @@
+
+query GetJobCandidatesAsync(  
+  $filter: JobCandidateFilterInput!
+  $skip: Int!
+  $take: Int!
+  $order: [JobCandidateSortInput!]){
+  jobCandidates(
+    filter: $filter
+    skip: $skip
+    take: $take
+    order: $order
+  ){
+    items{
+      companyId
+      candidateId
+      jobId
+      applicantName
+      stageId
+      stageDescription
+      candidateEmail
+      candidateCellPhone
+      candidateCreatedDate
+      candidateModificateDate
+      lastActivity
+      resumeFileName
+      resumePath
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

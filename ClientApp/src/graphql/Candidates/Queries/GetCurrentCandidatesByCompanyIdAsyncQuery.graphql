@@ -1,0 +1,29 @@
+query GetCurrentCandidatesByCompanyIdAsync(  
+  $companyId: Int!
+  $skip: Int!
+  $take: Int!
+  $order: [CandidateSortInput!]){
+  currentCandidatesByCompanyId(
+    companyId: $companyId
+    skip: $skip
+    take: $take
+    order: $order
+  ){
+    items{
+      firstName
+      lastName
+      email
+      jobTitle
+      jobName
+      dateLastContacted
+      createdDate
+      department   
+      lastActivity      
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

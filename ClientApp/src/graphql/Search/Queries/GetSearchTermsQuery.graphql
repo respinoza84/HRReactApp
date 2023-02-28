@@ -1,0 +1,25 @@
+query GetSearchTermsAsync(  
+  $filter: SearchQueryFilterInput!
+  $skip: Int!
+  $take: Int!
+  $order: [SearchResultSortInput!]){
+  searchTerms(
+    filter: $filter
+    skip: $skip
+    take: $take
+    order: $order
+  ){
+    items{
+      id
+      name
+      entityType  
+      jobType
+      jobOwnerShip
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

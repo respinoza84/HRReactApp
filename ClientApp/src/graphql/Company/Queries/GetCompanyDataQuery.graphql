@@ -1,0 +1,29 @@
+query GetCompanyData(  
+  $filter: CompanyFilterInput!
+  $skip: Int!
+  $take: Int!
+  $order: [CompanySortInput!]){
+  companyData(
+    filter: $filter
+    skip: $skip
+    take: $take
+    order: $order
+  ){
+    items{
+        id
+        companyName
+        companyOwner
+        contact
+        companyType
+        companyVertical
+        lastActivity
+        document
+        modifiedDate
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

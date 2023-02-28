@@ -1,0 +1,22 @@
+query GetCandidateActivities($entityId: Int!) {
+  candidateActivities(entityId: $entityId) {
+    items{
+      id
+      entityName
+      entityId
+      action
+      status
+      company
+      contact
+      createdBy
+      modifiedBy
+      createdDate
+      modifiedDate
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

@@ -1,0 +1,20 @@
+query GetHistoryByCandidateId($candidateId: Int!) {
+  historyByCandidateId(candidateId: $candidateId) {
+    items{
+      id
+      jobName
+      workType
+      companyName
+      statusAchieved
+      status
+      owner
+      startDate
+      startDate
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

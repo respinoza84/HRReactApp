@@ -1,0 +1,35 @@
+
+query GetJobById(  
+  $jobId: Int!){
+  jobById(
+    jobId: $jobId
+  ){
+      id
+      city
+      state
+      zipCode
+      territory
+      numOfPositions
+      contactName
+      createdDate
+      modifiedDate
+      companyId
+      companyName
+      statusId
+      status
+      jobName
+      jobType
+      jobType
+      jobSource
+      jobDescription
+      jobOwnerShip
+      candidates
+      career
+      contactId
+      payRange
+      jobVertical
+      salaryFrom
+      salaryTo
+      internalReference
+  }
+}

@@ -1,0 +1,39 @@
+
+query GetContacts(  
+  $companyId: Int!
+  $skip: Int!
+  $take: Int!
+  $order: [ContactSortInput!]){
+  contacts(
+    companyId: $companyId
+    skip: $skip
+    take: $take
+    order: $order
+  ){
+    items{
+      id
+      contactName
+      email
+      phone
+      city
+      state
+      country
+      zipCode
+      isPrimaryConctact
+      department
+      addressLine1
+      addressLine2
+      companyId
+      website
+      primaryPhone
+      modifiedBy
+      createdBy
+      createdDate
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}
